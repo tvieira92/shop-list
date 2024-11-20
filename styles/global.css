@@ -1,0 +1,74 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+:root {
+    /*Background*/
+    --bg-primary: #F4F5FB;
+    --bg-secondary: #FFFFFF;
+
+    /*Color*/
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    /*Content*/
+    --text-color-primary: #080B12;
+    --text-color-secondary: #374151;
+    --text-color-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    /*Border*/
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    /*Fonts*/
+    --ff-sans: 'Inter', system-ui, sans-serif;
+    --fw-base: 500;
+    --fw-md: 600; 
+    --fw-bold: 700;
+
+    --fs-lg: 1.5rem;
+    --fs-base: 1rem;
+
+    --text-label: 600 1rem/1.25;
+    --text-link: 500 0.875rem/1.0;
+
+
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.25;
+    color: var(--text-color-primary);
+    
+    overflow: hidden;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    overflow: hidden;
+}
+
+h1 {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    line-height: 2rem;
+    color: var(--text-color-primary);
+}
