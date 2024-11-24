@@ -1,0 +1,59 @@
+header {
+    margin-top:1.562rem ;
+    text-align: center;
+
+}
+
+
+.container {
+    max-width: 627px;
+    align-items: center;
+    margin: auto;
+    padding: 67px;
+
+    position: relative;
+    right: 10rem;
+    
+
+    
+    & span {
+        color: var(--color-brand);
+                   
+    }
+
+    & h1 {
+        padding-bottom: 2.75rem;
+        padding-top: 1rem;
+    }
+    
+}
+
+#add-item {
+    display: flex;
+    gap: 1rem;
+
+    & #item {
+        border: 1px solid var(--border-primary);
+        border-radius: 0.75rem;
+        width: 28.18rem;
+        padding: 0.75rem;
+
+    }
+
+    & button {
+        all: unset;
+        
+        color: var(--always-white);
+        background-color: var(--color-brand);
+
+        width: 10rem;
+        height: 2.75rem;
+        border-radius: 0.75rem;
+
+        text-align: center;
+
+        cursor: pointer;
+
+        
+    }
+}
