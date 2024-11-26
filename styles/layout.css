@@ -12,7 +12,7 @@ header {
     padding: 67px;
 
     position: relative;
-    right: 10rem;
+    /*right: 10rem;*/
     
 
     
@@ -38,6 +38,11 @@ header {
         width: 28.18rem;
         padding: 0.75rem;
 
+        &:hover {
+            border: 2px solid var(--border-hover);
+        }
+
+        
     }
 
     & button {
@@ -54,6 +59,55 @@ header {
 
         cursor: pointer;
 
+        &:hover {
+            background-color: var(--color-brand-hover);
+        }
+
         
     }
 }
+
+.shop-list {
+    display: flex;
+    margin-top: 2.5rem;
+
+    & .list-checkbox {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    & li {
+        align-items: center;
+        justify-content: space-between;
+        height: 3.562rem;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        background: var(--bg-secondary);
+    }
+
+}
+
+.message-deleted {
+    width: 33.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0;
+    background-color: red;
+    font-size: 1.2rem;
+    gap: 1rem;
+    color: white;
+    font-weight: 600;
+  }
+
+
+@media (width >= 30rem) {
+    main {
+      max-width: 37.5rem;
+      margin-inline: auto;
+    }
+  }
