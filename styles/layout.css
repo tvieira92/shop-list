@@ -67,42 +67,44 @@ header {
     }
 }
 
-.shop-list {
-    display: flex;
-    margin-top: 2.5rem;
 
-    & .list-checkbox {
-        flex-direction: column;
-        gap: 0.75rem;
-        width: 100%;
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 627px;
+
+    & img {
+        max-width: 16px;
+        max-height: 16px;
+        
+    }
+    
+    & #products {
+       height: 45px; 
+       margin-top: 1rem;
+       border-radius: 12px;
+       border: none;
+       outline: 1px solid var(--border-primary);
+
+       &:hover {
+        outline: 1px solid var(--border-hover);
+       }
+
     }
 
-    & li {
-        align-items: center;
-        justify-content: space-between;
-        height: 3.562rem;
-        width: 100%;
-        padding: 1rem;
-        border-radius: 0.75rem;
-        background: var(--bg-secondary);
+   }
+
+   #delete-alert {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2.25rem;
+    width: 600px;
+
+    & img:nth-child(1) {
+        align-items: end;
     }
 
-}
-
-.message-deleted {
-    width: 33.5rem;
-    height: 3.5rem;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto 0;
-    background-color: red;
-    font-size: 1.2rem;
-    gap: 1rem;
-    color: white;
-    font-weight: 600;
-  }
+   }
 
 
 @media (width >= 30rem) {

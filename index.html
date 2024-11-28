@@ -21,16 +21,30 @@
             <span><- Voltar</span>
             <h1>Compras da semana</h1>
             <form id="add-item" action="#">
-                <input id="item" type="text" placeholder="Adicione um novo item">
+                <input id="item" type="text" name="item" placeholder="Adicione um novo item" required>
                 <button type="submit">Adicionar item</button>
             </form>
         </div>
 
         <div id="shoplist" class="buy">
-            <ul id="addList" class="flex list-checkbox">
+            <div class="input-wrapper">
+            <input type="text" id="products" name="products" value="Pão de forma">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="products" name="products" value="Café preto">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="products" name="products" value="Suco de laranja">
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="products" name="products" value="Bolacha">
+            </div>
 
-            </ul>
-            
+            <div id="delete-alert" class="content-tag">
+                <img src="assets/icons/alert.svg" alt="Alerta">
+                <span >O item foi removido da lista</span>
+                <img src="assets/icons/x.svg" alt="delete icon">
+            </div>
         </div>
         </main>
     </div>
