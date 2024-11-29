@@ -1,115 +1,173 @@
 header {
-    margin-top:1.562rem ;
-    text-align: center;
-
+  margin-top: 1.562rem;
+  text-align: center;
+  margin-bottom: 4rem;
 }
-
 
 .container {
-    max-width: 627px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 627px;
+  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
+
+  & span {
+    color: var(--color-brand);
+  }
+
+  & h1 {
+    padding-bottom: 2.75rem;
+    padding-top: 1rem;
+  }
+}
+
+.add-item-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & form {
+    display: flex;
     align-items: center;
-    margin: auto;
-    padding: 67px;
-
-    position: relative;
-    /*right: 10rem;*/
-    
-
-    
-    & span {
-        color: var(--color-brand);
-                   
-    }
-
-    & h1 {
-        padding-bottom: 2.75rem;
-        padding-top: 1rem;
-    }
-    
-}
-
-#add-item {
-    display: flex;
+    justify-content: center;
     gap: 1rem;
+  }
 
-    & #item {
-        border: 1px solid var(--border-primary);
-        border-radius: 0.75rem;
-        width: 28.18rem;
-        padding: 0.75rem;
-
-        &:hover {
-            border: 2px solid var(--border-hover);
-        }
-
-        
-    }
-
-    & button {
-        all: unset;
-        
-        color: var(--always-white);
-        background-color: var(--color-brand);
-
-        width: 10rem;
-        height: 2.75rem;
-        border-radius: 0.75rem;
-
-        text-align: center;
-
-        cursor: pointer;
-
-        &:hover {
-            background-color: var(--color-brand-hover);
-        }
-
-        
-    }
-}
-
-
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 627px;
-
-    & img {
-        max-width: 16px;
-        max-height: 16px;
-        
-    }
+  & input {
+    width: 100%;
+    border: 2px solid var(--border-primary);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
     
-    & #products {
-       height: 45px; 
-       margin-top: 1rem;
-       border-radius: 12px;
-       border: none;
-       outline: 1px solid var(--border-primary);
-
-       &:hover {
-        outline: 1px solid var(--border-hover);
-       }
-
+    ::placeholder {
+      color: var(--text-color-tertiary);
     }
 
-   }
-
-   #delete-alert {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 2.25rem;
-    width: 600px;
-
-    & img:nth-child(1) {
-        align-items: end;
+    &:hover {
+      border: 2px solid var(--border-hover);
     }
 
-   }
+  }
 
+  & button {
+    all: unset;
+    color: var(--always-white);
+    background-color: var(--color-brand);
+    border-radius: 0.75rem;
+    max-width: 160px;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: normal;
+    cursor: pointer;
 
-@media (width >= 30rem) {
-    main {
-      max-width: 37.5rem;
-      margin-inline: auto;
+    &:hover {
+      background-color: var(--color-brand-hover);
     }
   }
+}
+
+.item-quiz {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  gap: 1rem;
+  border-radius: 12px;
+  background-color: var(--bg-secondary);
+
+  & .input-checkbox {
+  }
+
+
+  & label {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+  }
+
+  & button {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    min-width: 0;
+    max-width: 1.2rem;
+    background-color: inherit;
+    background-image: url(../assets/icons/trash.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+}
+
+
+.delete-alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.25rem;
+  width: 100%;
+
+  padding: 0.8rem 1rem;
+  background-color: var(--color-danger);
+  margin: 12px;
+  border-radius: 12px;
+  font-family: var(--ff-sans);
+  color: var(--always-white);
+
+  & span {
+    font-weight: 500;
+    color: var(--bg-secondary);
+  }
+
+  & #close-icon {
+    margin-left: auto;
+  }
+}
+
+/* @media (width >= 30rem) {
+  main {
+    max-width: 37.5rem;
+    margin-inline: auto;
+  }
+} */
+
+@media screen and (max-width: 700px) {
+  header {
+    display: none;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .add-item-list {
+    & button {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    & form {
+      flex-direction: column;
+    }
+  }
+
+  #add-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

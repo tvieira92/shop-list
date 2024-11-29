@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Maven +Pro:wght@400..900&display=swap" rel="stylesheet">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Maven +Pro:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de compras</title>
-    <link rel="stylesheet" href="styles/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
 
-    <div id="main-container">
-        <header>
-            <img src="assets/logo.svg" alt="logo">
-        </header>
-        <main>
-        <div class="container">
-            <span><- Voltar</span>
-            <h1>Compras da semana</h1>
-            <form id="add-item" action="#">
-                <input id="item" type="text" name="item" placeholder="Adicione um novo item" required>
-                <button type="submit">Adicionar item</button>
-            </form>
+  <body>
+    <header>
+      <img src="assets/logo.svg" alt="logo" />
+    </header>
+
+    <main>
+      <div class="container" id="container">
+
+        <div class="add-item-list">
+          <span><- Voltar</span>
+          <h1>Compras da semana</h1>
+          <form id="create-new-item" action="#">
+            <input
+              id="add-item"
+              type="text"
+              name="item"
+              placeholder="Adicione um novo item"
+              required
+            />
+            <button type="submit">Adicionar item</button>
+          </form>
         </div>
 
-        <div id="shoplist" class="buy">
-            <div class="input-wrapper">
-            <input type="text" id="products" name="products" value="Pão de forma">
-            </div>
-            <div class="input-wrapper">
-                <input type="text" id="products" name="products" value="Café preto">
-            </div>
-            <div class="input-wrapper">
-                <input type="text" id="products" name="products" value="Suco de laranja">
-            </div>
-            <div class="input-wrapper">
-                <input type="text" id="products" name="products" value="Bolacha">
-            </div>
-
-            <div id="delete-alert" class="content-tag">
-                <img src="assets/icons/alert.svg" alt="Alerta">
-                <span >O item foi removido da lista</span>
-                <img src="assets/icons/x.svg" alt="delete icon">
-            </div>
+        <div class="item-quiz" id="items">
         </div>
-        </main>
-    </div>
 
-    <script src="scripts.js"></script>
-</body>
+        <!-- <div class="delete-alert">
+          <img src="assets/icons/alert.svg" alt="Alerta" />
+          <span>O item foi removido da lista</span>
+          <img id="close-icon" src="assets/icons/x.svg" alt="delete icon" />
+        </div> -->
+      </div>
+
+    </main>
+
+    <script src="scripts.js" />
+    
+  </body>
 </html>

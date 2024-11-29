@@ -73,29 +73,3 @@ h1 {
     color: var(--text-color-primary);
 }
 
-img {
-    max-width: 100%;
-}
-
-.flex {
-    display: flex;
-}
-
-.content-tag {
-    display: inline-block;
-    position: relative;
-    right: 0.7rem;
-    padding: 8px 16px 8px 16px;
-    background-color: var(--color-danger);
-    margin: 12px;
-    border-radius: 12px;
-    font-family: var(--ff-sans);
-    color: var(--always-white);
-}
-
-@media (width >= 30rem) {
-    main {
-      max-width: 37.5rem;
-      margin-inline: auto;
-    }
-  }
